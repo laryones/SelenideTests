@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class SelenideWikiTests {
 
-    static class SelenideWikiTest {
         @BeforeAll
         static void beforeAll() {
             Configuration.startMaximized = true;
@@ -19,7 +18,7 @@ public class SelenideWikiTests {
         @Test
         void checkWikiSelenide() {
             // Откройте страницу Selenide в Github
-            Selenide.open("https://github.com/selenide/selenide");
+            open("https://github.com/selenide/selenide");
 
             // Перейдите в раздел Wiki проекта
             $("#wiki-tab").click();
@@ -35,8 +34,3 @@ public class SelenideWikiTests {
     }
 
 
-
-
-
-
-}
